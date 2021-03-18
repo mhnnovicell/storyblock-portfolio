@@ -1,12 +1,18 @@
 <template>
   <section>
+    <div class="container">
     <component
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
       :is="story.content.component" />
+      </div>
   </section>
+  <!-- To create new "items" in Storyblok see this article
+  https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial#creating-the-article-content-type -->
 </template>
+
+
  
 <script>
 export default {
