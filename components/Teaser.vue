@@ -1,12 +1,16 @@
 <template>
   <div
     v-editable="blok"
-    class="pb-8 mb-6 font-bold text-center">
+    class="grid-row" data-aos="fade-in">
     <img
-      class="h-48 w-full mb-4 object-cover"
+     
+      v-if="blok.image.filename"
       :src="blok.image.filename" />
-      
-    <h3 class="text-5xl">{{ blok.headline }}</h3>
+
+    <h1 class="text-5xl" v-if="blok.headline">{{ blok.headline }}</h1>
+    <p v-if="blok.description">
+      {{blok.description}}
+    </p>
   </div>
 </template>
  
@@ -17,6 +21,6 @@ export default {
       type: Object,
       required: true
     }
-  }
+  },
 }
 </script>

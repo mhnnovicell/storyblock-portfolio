@@ -8,12 +8,17 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Rokkitt&family=Biryani:wght@300;400&display=swap' },
+
+
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/master'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,6 +48,16 @@ proxy: {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
+
+  // googleFonts: {
+  //   display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+  //   preload: true,
+
+  //   families: {
+  //     Roboto: true,
+  //     'Josefin+Sans': true,
+  //   }
+  // },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
