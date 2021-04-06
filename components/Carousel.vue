@@ -10,14 +10,14 @@
       <div>4</div>
     </VueSlickCarousel> -->
 
-<carousel>
+<!-- <carousel>
   <slide>
     Slide 1 Content
   </slide>
   <slide>
     Slide 2 Content
   </slide>
-</carousel>
+</carousel> -->
 
   </div>
 </template>
@@ -26,7 +26,7 @@
   // import VueSlickCarousel from 'vue-slick-carousel'
   // import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
-import { Carousel, Slide } from 'vue-carousel';
+// import { Carousel, Slide } from 'vue-carousel';
 
 
 export default {
@@ -80,10 +80,10 @@ export default {
 //     },
 
 
-  components: {
-    Carousel,
-    Slide,
-  }
+  // components: {
+  //   Carousel,
+  //   Slide,
+  // }
 
 
 
