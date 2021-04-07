@@ -1,7 +1,7 @@
 <template>
   <div
     v-editable="blok"
-    class="grid-row" data-aos="fade-in">
+    class="grid-row" data-aos="fade-in"  data-aos-delay="900">
 
 <div class="row">
   <!-- Using value -->

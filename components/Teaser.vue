@@ -1,7 +1,9 @@
 <template>
   <div
     v-editable="blok"
-    class="grid-row" data-aos="fade-in">
+    class="grid-row" data-aos="fade-in" data-aos-delay="500"     data-aos-offset="200"
+    data-aos-anchor-placement="top-center"
+>
     <img
      
       v-if="blok.image.filename"
