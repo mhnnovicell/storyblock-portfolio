@@ -19,6 +19,61 @@
   </slide>
 </carousel> -->
 
+  <swiper ref="mySwiper" :options="swiperOptions"  >
+            <swiper-slide v-for="webimages in blok.web_images" :key="webimages.filename">
+            <img :src="webimages.filename">
+
+      </swiper-slide>
+                <div id="overlay" class="swiper-slide-caption">
+          <div class="shell">
+            <h1>{{blok.web_headline}}</h1>
+ 
+          </div>
+        </div>
+
+            <swiper-slide v-for="designimages in blok.design_images" :key="designimages.filename">
+            <img :src="designimages.filename">
+      </swiper-slide>
+                <div id="overlay" class="swiper-slide-caption">
+          <div class="shell">
+            <h1>{{blok.design_headline}}</h1>
+ 
+          </div>
+        </div>
+
+    <div class="swiper-pagination" slot="pagination"></div>
+       <!-- <div class="swiper-button-prev" slot="button-prev" v-on:click="gotoPreviousSlide"></div>
+            <div class="swiper-button-next" slot="button-next" v-on:click="gotoNextSlide"></div> -->
+  </swiper>
+
+
+  <swiper class="swiper" id="testhest" :options="swiperOptionSecond">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+    <swiper-slide>Slide 10</swiper-slide>
+        <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+    <swiper-slide>Slide 10</swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+           <div class="swiper-button-prev" slot="button-prev" v-on:click="gotoPreviousSlide"></div>
+            <div class="swiper-button-next" slot="button-next" v-on:click="gotoNextSlide"></div>
+  </swiper>
+
+
   </div>
 </template>
  
@@ -28,6 +83,14 @@
 
 // import { Carousel, Slide } from 'vue-carousel';
 
+import { Swiper, SwiperSlide, directive, Navigation } from 'vue-awesome-swiper'
+
+
+Swiper.use([Navigation])
+
+
+// import style (>= Swiper 6.x)
+import 'swiper/swiper-bundle.css'
 
 export default {
   props: {
@@ -85,7 +148,102 @@ export default {
   //   Slide,
   // }
 
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  directives: {
+    swiper: directive
+  },
 
+  data() {
+      return {
+        swiperOptions: {
+ 
+
+
+              breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    //Make changes to options down here
+    640: {
+      slidesPerView: 2,
+          slidesPerColumn: 4,
+          slidesPerGroup: 4,
+
+      slidesPerColumnFill: 'row',
+        grabCursor: true,
+
+    }
+  },
+
+           pagination: {
+            el: '.swiper-pagination'
+          },
+          navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+          // Some Swiper option/callback...
+        },
+              swiperOptionSecond: {
+          slidesPerView: 10,
+      slidesPerColumnFill: 'row',
+
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+          }
+        }
+      }
+    },
+
+        computed: {
+      swiper() {
+        return this.$refs.mySwiper.$swiper
+      }
+    },
+    mounted() {
+      console.log('Current Swiper instance object', this.swiper)
+
+
+    },
+
+        methods: {
+          gotoNextSlide(){
+            this.$refs.mySwiper.$swiper.slideNext(1000, false);
+            console.log(this.$refs.mySwiper.$swiper.slideNext(1000, false))
+          },
+
+               gotoPreviousSlide(){
+this.$refs.mySwiper.$swiper.slidePrev(1000, false);
+          }
+    }
 
 }
 </script>
+
+<style lang="scss" scoped>
+
+  #testhest {
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+
+    .swiper-slide {
+      height: 200px;
+    }
+  }
+</style>

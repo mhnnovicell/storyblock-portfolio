@@ -21,7 +21,7 @@ html {
  .grid-row{
     color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -36,6 +36,58 @@ object-fit: cover;
 }
  }
 
+
+
+
+h1, h2, h3, h4, h5{
+    font-family: 'Rokkitt', serif;
+        font-weight: bold;
+    color: #2BF4A1;
+}
+
+a, p, span, li, strong, div{
+    font-family: 'Biryani', monospace;
+}
+
+
+.swiper-slide{
+
+
+img{
+width: 5%;    
+// margin-top: 20px;
+// margin-left: 60px;
+// margin-bottom: 10px;
+display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    // height: 100px;
+    // width: 100px;
+}
+}
+
+.swiper-container{
+    background: linear-gradient(30deg, #4A0C85 0%, #97258A 50%, #2BF4A1 100%);
+    background-size: 200%;
+    animation: aurora 10s infinite;
+    border-radius: 8px;
+}
+
+.swiper-slide {
+    position: relative;
+  }
+  
+  #overlay {
+    top: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(74, 12, 133, 0.4);
+  }
 
 
 
@@ -56,20 +108,3 @@ object-fit: cover;
         background-position: left top;
     }
 }
-
-h1, h2, h3, h4, h5{
-    font-family: 'Rokkitt', serif;
-        font-weight: bold;
-    color: #2BF4A1;
-}
-
-a, p, span, li, strong, div{
-    font-family: 'Biryani', monospace;
-}
-
-.web-images{
-background: none;
-    border: none;
-
-}
-
