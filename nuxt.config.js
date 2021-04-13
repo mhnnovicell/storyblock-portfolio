@@ -1,14 +1,14 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'storyblock-portfolio',
+    title: 'mikkelraev.dk',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon-32x32.png' },
       { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Rokkitt&family=Biryani:wght@300;400&display=swap' },
 
@@ -82,8 +82,13 @@ proxy: {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
-    }
+      lang: 'da'
+    },
+    icon: {
+      source: '/Fox-logo-large.svg'   
+     },
+     purpose: 'maskable'
+
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
