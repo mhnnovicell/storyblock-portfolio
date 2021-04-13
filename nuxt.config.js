@@ -87,7 +87,10 @@ proxy: {
     icon: {
       source: '/Fox-logo-large.svg'   
      },
-     purpose: 'maskable'
+     purpose: 'maskable',
+     meta: {
+      theme_color: '#2BF4A1'
+        }
 
   },
 
