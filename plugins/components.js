@@ -5,6 +5,7 @@ import Grid from '~/components/Grid.vue'
 import Feature from '~/components/Feature.vue'
 import Carousel from '~/components/Carousel.vue'
 import ButtonContent from '~/components/ButtonContent.vue'
+import Skills from '~/components/Skills.vue'
 
  
 Vue.component('page', Page)
@@ -13,3 +14,4 @@ Vue.component('grid', Grid)
 Vue.component('feature', Feature)
 Vue.component('carousel', Carousel)
 Vue.component('buttoncontent', ButtonContent)
+Vue.component('skills', Skills)

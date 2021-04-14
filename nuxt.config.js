@@ -85,9 +85,9 @@ proxy: {
       lang: 'da'
     },
     icon: {
-      source: '/Fox-logo-large.svg'   
+      source: '~/static/mikkelraev-logo-small.png',
+      fileName: 'mikkelraev-logo-small.png' 
      },
-     purpose: 'maskable',
      meta: {
       theme_color: '#2BF4A1'
         }

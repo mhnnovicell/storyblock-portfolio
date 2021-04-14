@@ -70,7 +70,7 @@ display: flex;
 .swiper-container{
     background: linear-gradient(30deg, #4A0C85 0%, #97258A 50%, #2BF4A1 100%);
     background-size: 200%;
-    animation: aurora 10s infinite;
+    animation: aurora 15s infinite;
     border-radius: 8px;
 }
 
@@ -133,4 +133,14 @@ display: flex;
 ::selection{
     background: #2BF4A1;
     color: black;
+  }
+
+  .collaspeelementfirst{
+    outline: none !important;
+    box-shadow: none;
+  }
+
+  .collaspeelementsecond{
+    outline: none !important;
+    box-shadow: none;
   }
