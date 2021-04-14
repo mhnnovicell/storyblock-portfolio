@@ -9,7 +9,7 @@
       :src="blok.image.filename" />
 
     <h1 class="text-5xl" v-if="blok.headline">{{ blok.headline }}</h1>
-    <p v-if="blok.description">
+    <p class="mt-3" v-if="blok.description">
       {{blok.description}}
     </p>
   </div>

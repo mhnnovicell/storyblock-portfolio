@@ -10,7 +10,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-32x32.png' },
       { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Rokkitt&family=Biryani:wght@300;400&display=swap' },
+      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Noto+Sans+JP&display=swap' },
 
 
     ]

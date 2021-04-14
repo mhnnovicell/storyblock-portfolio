@@ -41,13 +41,14 @@ object-fit: cover;
 
 
 h1, h2, h3, h4, h5{
-    font-family: 'Rokkitt', serif;
-        font-weight: bold;
+    font-family: 'Poppins', serif;
+        font-weight: 200;
     color: #2BF4A1;
+    letter-spacing: 0.1em;
 }
 
 a, p, span, li, strong, div{
-    font-family: 'Biryani', monospace;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 
@@ -143,4 +144,8 @@ display: flex;
   .collaspeelementsecond{
     outline: none !important;
     box-shadow: none;
+  }
+
+  .link-secondary{
+color: #4A0C85;
   }
