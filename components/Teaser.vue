@@ -1,7 +1,7 @@
 <template>
   <div
     v-editable="blok"
-    class="grid-row" data-aos="fade-in" 
+    class="grid-row shadow-lg" data-aos="fade-in" 
 >
     <img
      

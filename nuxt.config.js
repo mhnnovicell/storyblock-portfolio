@@ -46,8 +46,12 @@ proxy: {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+
+
   buildModules: [
   ],
+
+
 
   // googleFonts: {
   //   display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
@@ -74,7 +78,26 @@ proxy: {
         cacheProvider: 'memory'
       }
     ],
+
+    // '@nuxtjs/google-fonts',
+
+
   ],
+
+//   googleFonts: {
+//     families: {
+//         Roboto: true,
+//         'Josefin+Sans': true,
+//         Lato: [100, 300],
+//         Raleway: {
+//           wght: [100, 400],
+//           ital: [100]
+//         },
+//       },
+//     display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+//     prefetch: true,
+//     preload: true
+//   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
