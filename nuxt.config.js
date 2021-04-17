@@ -113,7 +113,8 @@ proxy: {
      },
      meta: {
       theme_color: '#2BF4A1'
-        }
+        },
+        purpose: 'any'
 
   },
 
