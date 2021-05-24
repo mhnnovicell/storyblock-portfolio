@@ -34,7 +34,7 @@
     </div>
     </div> -->
   <b-card-group deck>
-    <b-card v-if="blok.heading" :title="blok.heading" :img-src="blok.image[0].filename" :img-alt="blok.heading" img-top>
+    <b-card v-if="blok.heading" :title="blok.heading" img-top>
       <b-card-text v-if="blok.text">
      {{blok.text}}
       </b-card-text>
@@ -44,7 +44,7 @@
 
     </b-card>
 
-    <b-card v-if="blok.heading_education_second" :title="blok.heading_education_second" :img-src="blok.image_education_second[0].filename" :img-alt="blok.heading_education_second" img-top>
+    <b-card v-if="blok.heading_education_second" :title="blok.heading_education_second" img-top>
       <b-card-text>
      {{blok.text_education_second}}
       </b-card-text>
@@ -53,7 +53,7 @@
       </b-card-text>
     </b-card>
 
-    <b-card v-if="blok.heading_education_third" :title="blok.heading_education_third" :img-src="blok.image_education_third[0].filename" :img-alt="blok.heading_education_third" img-top>
+    <b-card v-if="blok.heading_education_third" :title="blok.heading_education_third" img-top>
       <b-card-text>
      {{blok.text_education_third}}
 

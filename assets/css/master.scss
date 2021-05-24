@@ -2,204 +2,294 @@
 @import 'bootstrap/scss/_variables.scss';
 @import 'bootstrap/scss/_mixins.scss';
 
-body{
-    background: purple;
+$primary: #4a0c85;
+$secondary: #2bf4a1;
+$bg-primary: #4a0c85;
+$bg-secondary: #2bf4a1;
+
+body {
+  background: purple;
 }
 
 html {
-    font-size: 1rem;
-    -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
 
-  }
-  
 .container-grid {
-    // display: grid;
-    // grid-column-gap: 20px;
-    // grid-row-gap: 20px;
-    // justify-items: stretch;
-    // align-items: stretch;
-    // grid-template-columns: 1fr 3fr 2fr;
-    // grid-template-rows: repeat(auto-fill, 50%);
-    // height: calc(100vh - 20px);
-    // // grid-template-rows: auto auto 3fr 1fr 1fr auto auto;
+  // display: grid;
+  // grid-column-gap: 20px;
+  // grid-row-gap: 20px;
+  // justify-items: stretch;
+  // align-items: stretch;
+  // grid-template-columns: 1fr 3fr 2fr;
+  // grid-template-rows: repeat(auto-fill, 50%);
+  // height: calc(100vh - 20px);
+  // // grid-template-rows: auto auto 3fr 1fr 1fr auto auto;
 
-    // grid-auto-rows: min-content; /* min-content*/
-    // grid-auto-columns: min-content;
-    //See this page for row generation https://cssgrid-generator.netlify.app/
-    //For individual divs layout wise this property can be used https://www.w3schools.com/cssref/pr_grid-area.asp
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(100vw, 1fr));
-    grid-auto-columns: min-content;
-    grid-auto-rows: min-content; /* min-content*/
-    grid-auto-flow: dense;
-width: 100%;
-    justify-items: stretch;
-    align-items: stretch;
- grid-column-gap: 20px;
-    grid-row-gap: 20px;
-        height: calc(100vh - 20px);
+  // grid-auto-rows: min-content; /* min-content*/
+  // grid-auto-columns: min-content;
+  //See this page for row generation https://cssgrid-generator.netlify.app/
+  //For individual divs layout wise this property can be used https://www.w3schools.com/cssref/pr_grid-area.asp
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(100vw, 1fr));
+  grid-auto-columns: min-content;
+  grid-auto-rows: min-content; /* min-content*/
+  grid-auto-flow: dense;
+  width: 100%;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  height: calc(100vh - 20px);
 
-
-@include media-breakpoint-up(sm) { 
+  @include media-breakpoint-up(sm) {
     grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
     max-width: 1440px;
+  }
 
- }
-
- @include media-breakpoint-up(md) { 
+  @include media-breakpoint-up(md) {
     grid-template-columns: repeat(auto-fill, minmax(35vw, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(35vw, 1fr));
     max-width: 1440px;
+  }
+}
 
- }
+.grid-row {
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(30deg, #4a0c85 0%, #97258a 50%, #2bf4a1 100%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
+  flex-direction: column;
 
- }
-
- .grid-row{
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(30deg, #4A0C85 0%, #97258A 50%, #2BF4A1 100%);
-    background-size: 200%;
-    animation: aurora 10s infinite;
-flex-direction: column;
-
-
-  
   /* Screen larger than 900px? 3 columns */
-  
 
-img{
-object-fit: cover;    
-}
- }
-
-
-
-
-h1, h2, h3, h4, h5{
-    font-family: 'Poppins', serif;
-        font-weight: 200;
-    color: #2BF4A1;
-    letter-spacing: 0.1em;
+  img {
+    object-fit: cover;
+  }
 }
 
-a, p, span, li, strong, div{
-    font-family: 'Noto Sans JP', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Poppins', serif;
+  font-weight: 200;
+  color: #2bf4a1;
+  letter-spacing: 0.1em;
 }
 
+a,
+p,
+span,
+li,
+strong,
+div {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
-.swiper-slide{
-
-
-img{
-width: 5%;    
-// margin-top: 20px;
-// margin-left: 60px;
-// margin-bottom: 10px;
-display: flex;
+.swiper-slide {
+  img {
+    width: 5%;
+    // margin-top: 20px;
+    // margin-left: 60px;
+    // margin-bottom: 10px;
+    display: flex;
     justify-content: flex-start;
     flex-direction: row;
     // height: 100px;
     // width: 100px;
-}
+  }
 }
 
-.swiper-container{
-    background: linear-gradient(30deg, #4A0C85 0%, #97258A 50%, #2BF4A1 100%);
-    background-size: 200%;
-    animation: aurora 15s infinite;
-    border-radius: 8px;
+.swiper-container {
+  background: linear-gradient(30deg, #4a0c85 0%, #97258a 50%, #2bf4a1 100%);
+  background-size: 200%;
+  animation: aurora 15s infinite;
+  border-radius: 8px;
 }
 
 .swiper-slide {
-    position: relative;
-  }
-  
-  #overlay {
-    top: 0;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(74, 12, 133, 0.4);
-  }
+  position: relative;
+}
 
-
+#overlay {
+  top: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(74, 12, 133, 0.4);
+}
 
 @keyframes aurora {
-    0% {
-        background-position: left top;
-    }
-    25% {
-        background-position: right top;
-    }
-    50% {
-        background-position: right bottom;
-    }
-    75% {
-        background-position: left bottom;
-    }
-    100% {
-        background-position: left top;
-    }
+  0% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: left top;
+  }
 }
 
-.collapsible-content{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-self: center;
-    flex-wrap: wrap;
+.collapsible-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: center;
+  flex-wrap: wrap;
 }
 
-.collapsbile-image-container{
-    img{
-        width: 50%;
-
-    }
+.collapsbile-image-container {
+  img {
+    width: 50%;
+  }
 }
 
-*{
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent; /* For some Androids */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
-::selection{
-    background: #2BF4A1;
-    color: black;
+::selection {
+  background: #2bf4a1;
+  color: black;
+}
+
+.collaspeelementfirst {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.collaspeelementsecond {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.link-secondary {
+  color: #4a0c85;
+}
+
+.card-subtitle {
+  color: white !important;
+}
+
+.card-deck {
+  .card {
+    background: rgba(74, 12, 133, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+//   .carousel-control-prev-icon {
+//     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff2BF4A1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+//    }
+
+//    .carousel-control-next-icon {
+//      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff2BF4A1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+//    }
+
+.rounded-custom {
+  border-radius: 8px;
+}
+
+.carousel-item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+a {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:active {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.close {
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.modal-content {
+  border: none;
+  background: rgba(74, 12, 133, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+
+  .modal-header {
+    border-bottom: none;
   }
 
-  .collaspeelementfirst{
-    outline: none !important;
-    box-shadow: none;
+  .modal-footer {
+    border-top: none;
   }
+}
 
-  .collaspeelementsecond{
-    outline: none !important;
-    box-shadow: none;
+.modal-img {
+    width: 100%;
+}
+
+.modal-header {
+  background-color: none !important;
+}
+
+.secondary {
+  color: $secondary;
+
+  &:hover,
+  &:active {
+    color: $secondary;
+    text-decoration: none;
   }
-
-  .link-secondary{
-color: #4A0C85;
-  }
-
-  .card{
-      background-color: #4A0C85;
-  }
-
-  .card-subtitle{
-      color: white !important;
-  }
-
-  
+}
+.carousel-caption{
+    top: 45%;
+    bottom: 0;
+}

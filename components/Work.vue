@@ -34,17 +34,9 @@
     </div>
     </div> -->
   <b-card-group deck>
-    <b-card v-if="blok.heading" :title="blok.heading" :img-src="blok.image[0].filename" :img-alt="blok.heading" img-top>
-      <b-card-text v-if="blok.text">
-     {{blok.text}}
-      </b-card-text>
-    <b-card-text v-if="blok.year">
-     {{blok.year}}
-      </b-card-text>
 
-    </b-card>
 
-    <b-card v-if="blok.heading_work_second" :title="blok.heading_work_second" :img-src="blok.image_work_second[0].filename" :img-alt="blok.heading_work_second" img-top>
+    <b-card v-if="blok.heading_work_second" :title="blok.heading_work_second" img-top>
       <b-card-text>
      {{blok.text_work_second}}
       </b-card-text>
@@ -53,7 +45,7 @@
       </b-card-text>
     </b-card>
 
-    <b-card v-if="blok.heading_work_third" :title="blok.heading_work_third" :img-src="blok.image_work_third[0].filename" :img-alt="blok.heading_work_third" img-top>
+    <b-card v-if="blok.heading_work_third" :title="blok.heading_work_third" img-top>
       <b-card-text>
      {{blok.text_work_third}}
 
@@ -65,7 +57,7 @@
 
     </b-card>
 
-        <b-card v-if="blok.heading_work_fourth" :title="blok.heading_work_fourth" :img-src="blok.image_work_fourth[0].filename" :img-alt="blok.heading_work_fourth" img-top>
+        <b-card v-if="blok.heading_work_fourth" :title="blok.heading_work_fourth"  img-top>
       <b-card-text>
      {{blok.text_work_fourth}}
 
