@@ -2,7 +2,6 @@
   <div v-editable="blok" class="shadow-lg rounded-custom" data-aos="fade-in">
     <b-carousel
       id="carousel-fade statements-carousel"
-      style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
       :interval="10000"
@@ -33,7 +32,7 @@
       </b-carousel-slide>
       <b-carousel-slide
         :img-src="blok.brasidan_image.filename"
-        id="asiento-card"
+        id="brasidan-card"
         :img-alt="blok.brasidan_name"
       >
         <b-card
@@ -56,7 +55,7 @@
       </b-carousel-slide>
       <b-carousel-slide
         :img-src="blok.db_image.filename"
-        id="asiento-card"
+        id="db-card"
         :img-alt="blok.db_name"
       >
         <b-card
