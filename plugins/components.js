@@ -7,6 +7,8 @@ import ButtonContent from '~/components/ButtonContent.vue'
 import Skills from '~/components/Skills.vue'
 import Work from '~/components/Work.vue'
 import Clients from '~/components/Clients.vue'
+import Statements from '~/components/Statements.vue'
+import Social from '~/components/Social.vue'
 
  
 Vue.component('page', Page)
@@ -17,3 +19,5 @@ Vue.component('buttoncontent', ButtonContent)
 Vue.component('skills', Skills)
 Vue.component('work', Work)
 Vue.component('clients', Clients)
+Vue.component('statements', Statements)
+Vue.component('social', Social)

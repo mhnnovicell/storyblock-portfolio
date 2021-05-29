@@ -1,7 +1,7 @@
 <template>
   <div v-editable="blok" class="shadow-lg rounded-custom" data-aos="fade-in">
     <b-carousel
-      id="carousel-1"
+      id="carousel-clients"
       v-model="slide"
       :interval="0"
       controls
@@ -188,16 +188,15 @@
         text-html="<a>Læs mere</a>"
         :img-alt="blok.animalinfo_headline"
         :img-src="animalinfoimages.filename"
-                v-b-modal="blok.animalinfo_headline"
-
+        v-b-modal="blok.animalinfo_headline"
       ></b-carousel-slide>
 
-         <!-- The modal -->
+      <!-- The modal -->
       <b-modal :id="blok.animalinfo_headline" centered ok-only ok-title="Luk">
         <b-container>
           <b-row class="mb-1">
             <b-col cols="12" class="mb-3">
-              <h3>{{ blok.animalinfo_headline}}</h3>
+              <h3>{{ blok.animalinfo_headline }}</h3>
             </b-col>
             <b-col
               cols="12"
@@ -214,7 +213,10 @@
               <div class="mt-3 text-white">{{ blok.animalinfo_text }}</div>
             </b-col>
             <b-col cols="12" class="mt-3">
-              <a :href="blok.animalinfo_link.url" target="_blank" class="secondary"
+              <a
+                :href="blok.animalinfo_link.url"
+                target="_blank"
+                class="secondary"
                 >Se siden</a
               >
             </b-col>
@@ -230,11 +232,10 @@
         text-html="<a>Læs mere</a>"
         :img-alt="blok.beeroclock_headline"
         :img-src="beeroclockimages.filename"
-            v-b-modal="blok.beeroclock_headline"
-
+        v-b-modal="blok.beeroclock_headline"
       ></b-carousel-slide>
 
-            <!-- The modal -->
+      <!-- The modal -->
       <b-modal :id="blok.beeroclock_headline" centered ok-only ok-title="Luk">
         <b-container>
           <b-row class="mb-1">
@@ -256,14 +257,16 @@
               <div class="mt-3 text-white">{{ blok.beeroclock_text }}</div>
             </b-col>
             <b-col cols="12" class="mt-3">
-              <a :href="blok.beeroclock_link.url" target="_blank" class="secondary"
+              <a
+                :href="blok.beeroclock_link.url"
+                target="_blank"
+                class="secondary"
                 >Se siden</a
               >
             </b-col>
           </b-row>
         </b-container>
       </b-modal>
-
     </b-carousel>
   </div>
 </template>
