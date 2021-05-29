@@ -1,10 +1,9 @@
 <template>
   <div
     v-editable="blok"
-    class="grid-row shadow-lg" data-aos="fade-in" 
+    class="grid-row shadow-lg" data-aos="fade-in" :class="blok.image.filename == 'https://res.cloudinary.com/mikkelraev/image/upload/v1579431282/mikkelraev.dk/mikkel-edited-smaller.png' ? 'p-0' : ''" 
 >
     <img
-     
       v-if="blok.image.filename"
       :src="blok.image.filename" :alt="blok.image.filename" :title="blok.image.filename" />
 

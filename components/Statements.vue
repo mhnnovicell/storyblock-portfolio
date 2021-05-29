@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="shadow-lg rounded-custom" data-aos="fade-in">
+  <div v-editable="blok" class="shadow-lg rounded-custom statements-container" data-aos="fade-in">
     <b-carousel
       id="carousel-fade statements-carousel"
       fade

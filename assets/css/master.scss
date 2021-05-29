@@ -45,6 +45,7 @@ html {
   grid-row-gap: 20px;
   height: calc(100vh - 20px);
 
+
   @include media-breakpoint-up(sm) {
     grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
@@ -56,6 +57,8 @@ html {
     grid-template-rows: repeat(auto-fill, minmax(35vw, 1fr));
     max-width: 1440px;
   }
+
+
 }
 
 .grid-row {
@@ -70,6 +73,14 @@ html {
   background-size: 200%;
   animation: aurora 10s infinite;
   flex-direction: column;
+
+  max-width: 93%;
+  width: 93%;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 100%;
+    width: 100%;
+  }
 
   /* Screen larger than 900px? 3 columns */
 
@@ -331,4 +342,22 @@ a {
 
 .pointer{
     cursor: pointer;
+}
+
+.clients-container{
+    width: 93%;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 100%;
+        width: 100%;
+      }
+}
+
+.statements-container{
+    width: 93%;
+
+    @include media-breakpoint-up(sm) {
+        max-width: 100%;
+        width: 100%;
+      }
 }
