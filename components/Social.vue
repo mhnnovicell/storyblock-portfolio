@@ -14,16 +14,16 @@
     </p>
 
     <div class="d-flex mt-3">
-      <a :href="blok.linkedin_link.url" target="_blank" class="mr-4 text-white">
+      <a :href="blok.linkedin_link.url" target="_blank" class="mr-4 text-white" rel="noopener" >
         <b-icon-linkedin font-scale="2"></b-icon-linkedin>
       </a>
 
-      <a :href="blok.facebook_link.url" target="_blank" class="mr-4 text-white">
+      <a :href="blok.facebook_link.url" target="_blank" class="mr-4 text-white" rel="noopener">
         <b-icon-facebook
           font-scale="2"
         ></b-icon-facebook>
       </a>
-      <a :href="blok.instagram_link.url" target="_blank" class="text-white">
+      <a :href="blok.instagram_link.url" target="_blank" class="text-white" rel="noopener">
         <b-icon-instagram font-scale="2"></b-icon-instagram>
       </a>
     </div>
