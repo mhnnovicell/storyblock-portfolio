@@ -6,8 +6,8 @@
       :interval="0"
       controls
       indicators
-      img-width="1024"
-      img-height="480"
+      img-width="1920"
+      img-height="1440"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
