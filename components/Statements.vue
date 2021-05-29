@@ -5,8 +5,8 @@
       fade
       indicators
       :interval="10000"
-      img-width="1024"
-      img-height="980"
+      img-width="1920"
+      img-height="1440"
     >
       <b-carousel-slide
         :img-src="blok.asiento_image.filename"
