@@ -36,7 +36,7 @@
   <b-card-group deck>
 
 
-    <b-card v-if="blok.heading_work_second" :title="blok.heading_work_second" img-top>
+    <b-card v-if="blok.heading_work_second" :title="blok.heading_work_second">
       <b-card-text>
      {{blok.text_work_second}}
       </b-card-text>
@@ -45,7 +45,7 @@
       </b-card-text>
     </b-card>
 
-    <b-card v-if="blok.heading_work_third" :title="blok.heading_work_third" img-top>
+    <b-card v-if="blok.heading_work_third" :title="blok.heading_work_third">
       <b-card-text>
      {{blok.text_work_third}}
 
@@ -57,7 +57,7 @@
 
     </b-card>
 
-        <b-card v-if="blok.heading_work_fourth" :title="blok.heading_work_fourth"  img-top>
+        <b-card v-if="blok.heading_work_fourth" :title="blok.heading_work_fourth">
       <b-card-text>
      {{blok.text_work_fourth}}
 

@@ -14,7 +14,7 @@
     <div class="col-12 collapsible-content">
       <p>{{blok.web_content}}</p>
       <div class="col-3 collapsbile-image-container mt-3" v-for="webimages in blok.web_images" :key="webimages.filename" >
-      <img :src="webimages.filename" class="img-fluid">
+      <img :src="webimages.filename" class="img-fluid" :alt="webimages.filename">
       </div>
     </div>
   </b-collapse>
@@ -28,7 +28,7 @@
     <div class="col-12 collapsible-content">
       <p>{{blok.design_content}}</p>
       <div class="col-3 collapsbile-image-container mt-3" v-for="designimages in blok.design_images" :key="designimages.filename" >
-      <img :src="designimages.filename" class="img-fluid">
+      <img :src="designimages.filename" class="img-fluid" :alt="designimages.filename">
       </div>
     </div>
   </b-collapse>
