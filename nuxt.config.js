@@ -123,7 +123,7 @@ image: {
       name: "mikkelraev.dk",
       short_name: "mikkelraev.dk",
       background_color: "#800080",
-      theme_color: '#2BF4A1',
+      theme_color: '#2BF4A1'
 
     },
     icon: {
