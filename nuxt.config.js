@@ -128,7 +128,9 @@ image: {
       fileName: 'maskable_icon.png' 
      },
      meta: {
-      theme_color: '#2BF4A1'
+      theme_color: '#2BF4A1',
+      background_color: "#800080"
+
         },
         purpose: 'any',
         background_color: "#4a0c85",
