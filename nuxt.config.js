@@ -124,8 +124,8 @@ image: {
       short_name: "mikkelraev.dk"
     },
     icon: {
-      source: '~/static/mikkelraev-logo-small.png',
-      fileName: 'mikkelraev-logo-small.png' 
+      source: '~/static/maskable_icon.png',
+      fileName: 'maskable_icon.png' 
      },
      meta: {
       theme_color: '#2BF4A1'
