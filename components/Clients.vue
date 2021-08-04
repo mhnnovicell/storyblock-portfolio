@@ -21,6 +21,8 @@
         text-html="<span class='pointer'>Læs mere</span>"
       ></b-carousel-slide>
 
+      
+
       <!-- The modal -->
       <b-modal :id="blok.vegansearch_headline" centered ok-only ok-title="Luk">
         <b-container>
