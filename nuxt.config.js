@@ -119,7 +119,9 @@ image: {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'da'
+      lang: 'da',
+      name: "mikkelraev.dk",
+      short_name: "mikkelraev.dk"
     },
     icon: {
       source: '~/static/mikkelraev-logo-small.png',
