@@ -11,8 +11,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon-32x32.png' },
-      { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Noto+Sans+JP&display=swap' },
+      { rel: 'preconnect',  href: 'https://fonts.gstatic.com' }
+      // { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Noto+Sans+JP&display=swap' },
 
 
     ]
@@ -80,27 +80,21 @@ proxy: {
         cacheProvider: 'memory'
       }
     ],
-
     '@nuxt/image',
-    // '@nuxtjs/google-fonts',
-
+    '@nuxtjs/google-fonts',
 
   ],
 
-//   googleFonts: {
-//     families: {
-//         Roboto: true,
-//         'Josefin+Sans': true,
-//         Lato: [100, 300],
-//         Raleway: {
-//           wght: [100, 400],
-//           ital: [100]
-//         },
-//       },
-//     display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
-//     prefetch: true,
-//     preload: true
-//   },
+  googleFonts: {
+    families: {
+        'Noto+Sans+JP': true,
+        Poppins: [200],
+ 
+      },
+    display: 'swap', // 'auto' | 'block' | 'swap' | 'fallback' | 'optional'
+    prefetch: true,
+    preload: true
+  },
 
 image: {
   // Options
