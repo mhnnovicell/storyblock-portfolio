@@ -129,7 +129,10 @@ image: {
       theme_color: '#2BF4A1'
         },
         purpose: 'any',
-        background_color: "#4a0c85"
+        background_color: "#4a0c85",
+        name: "mikkelraev.dk",
+        author: "Mikkel Hornbech Nielsen",
+        lang: "da",
 
   },
 
