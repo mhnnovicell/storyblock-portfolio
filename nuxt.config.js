@@ -121,15 +121,17 @@ image: {
     manifest: {
       lang: 'da',
       name: "mikkelraev.dk",
-      short_name: "mikkelraev.dk"
+      short_name: "mikkelraev.dk",
+      background_color: "#800080",
+      theme_color: '#2BF4A1',
+
     },
     icon: {
       source: '~/static/maskable_icon.png',
       fileName: 'maskable_icon.png' 
      },
      meta: {
-      theme_color: '#2BF4A1',
-      background_color: "#800080"
+      theme_color: '#2BF4A1'
 
         },
         purpose: 'any',
