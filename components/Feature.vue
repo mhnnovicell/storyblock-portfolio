@@ -6,7 +6,7 @@
       provider="cloudinary"
       :src="this.$nuxt.cloudinary.baseURL + blok.image.filename"
       :alt="this.$nuxt.cloudinary.baseURL + blok.image.filename"
-      :sizes="this.$nuxt.image.screens"
+      sizes="sm:100vw md:50vw lg:400px"
       :modifiers="{
         format: 'webp',
         quality: 80,
