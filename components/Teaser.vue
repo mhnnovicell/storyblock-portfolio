@@ -38,6 +38,7 @@
       :modifiers="{
         quality: 80,
       }"
+      loading="lazy"
     />
 
     <h1 class="text-5xl" v-if="blok.headline">{{ blok.headline }}</h1>

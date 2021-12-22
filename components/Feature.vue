@@ -8,10 +8,10 @@
       :alt="this.$nuxt.cloudinary.baseURL + blok.image.filename"
       sizes="sm:100vw md:50vw lg:400px"
       :modifiers="{
-        format: 'webp',
         quality: 80,
       }"
       loading="lazy"
+      format="webp"
     />
     <h1 class="text-lg">{{ blok.name }}</h1>
     <p class="text-gray-600">

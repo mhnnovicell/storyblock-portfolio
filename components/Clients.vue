@@ -1,5 +1,9 @@
 <template>
-  <div v-editable="blok" class="shadow-lg rounded-custom clients-container" data-aos="fade-in">
+  <div
+    v-editable="blok"
+    class="shadow-lg rounded-custom clients-container"
+    data-aos="fade-in"
+  >
     <b-carousel
       id="carousel-clients"
       v-model="slide"
@@ -15,13 +19,28 @@
         v-for="vegansearchimages in blok.vegansearch_image"
         :key="vegansearchimages.filename"
         :caption="blok.vegansearch_headline"
-        :img-src="vegansearchimages.filename"
-        :img-alt="blok.vegansearch_headline"
         v-b-modal="blok.vegansearch_headline"
         text-html="<span class='pointer'>Læs mere</span>"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              vegansearchimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.vegansearch_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
-
-      
 
       <!-- The modal -->
       <b-modal :id="blok.vegansearch_headline" centered ok-only ok-title="Luk">
@@ -62,9 +81,26 @@
         :key="kurtnimages.filename"
         :caption="blok.kurtn_headline"
         text-html="<span class='pointer'>Læs mere</span>"
-        :img-alt="blok.kurtn_headline"
-        :img-src="kurtnimages.filename"
         v-b-modal="blok.kurtn_headline"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              kurtnimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.kurtn_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
 
       <!-- The modal -->
@@ -79,11 +115,23 @@
               v-for="kurtnimages in blok.kurtn_image"
               :key="kurtnimages.filename"
             >
-              <b-img
-                :src="kurtnimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  kurtnimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.kurtn_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.kurtn_text }}</div>
@@ -103,9 +151,26 @@
         :key="brasidanimages.filename"
         :caption="blok.brasidan_headline"
         text-html="<span class='pointer'>Læs mere</span>"
-        :img-alt="blok.brasidan_headline"
-        :img-src="brasidanimages.filename"
         v-b-modal="blok.brasidan_headline"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              brasidanimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.brasidan_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
 
       <!-- The modal -->
@@ -147,9 +212,26 @@
         :key="asientoimages.filename"
         :caption="blok.asiento_headline"
         text-html="<span class='pointer'>Læs mere</span>"
-        :img-alt="blok.asiento_headline"
-        :img-src="asientoimages.filename"
         v-b-modal="blok.asiento_headline"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              asientoimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.asiento_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
 
       <!-- The modal -->
@@ -188,9 +270,26 @@
         :key="animalinfoimages.filename"
         :caption="blok.animalinfo_headline"
         text-html="<span class='pointer'>Læs mere</span>"
-        :img-alt="blok.animalinfo_headline"
-        :img-src="animalinfoimages.filename"
         v-b-modal="blok.animalinfo_headline"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              animalinfoimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.animalinfo_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
 
       <!-- The modal -->
@@ -232,9 +331,26 @@
         :key="beeroclockimages.filename"
         :caption="blok.beeroclock_headline"
         text-html="<span class='pointer'>Læs mere</span>"
-        :img-alt="blok.beeroclock_headline"
-        :img-src="beeroclockimages.filename"
         v-b-modal="blok.beeroclock_headline"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              beeroclockimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.beeroclock_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
       ></b-carousel-slide>
 
       <!-- The modal -->
@@ -278,13 +394,13 @@ export default {
   props: {
     blok: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
     }
   },
   methods: {
@@ -293,7 +409,7 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
-    }
-  }
+    },
+  },
 }
 </script>

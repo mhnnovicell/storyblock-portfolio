@@ -5,12 +5,15 @@
     data-aos="fade-in"
   >
     <b-carousel
-      id="carousel-fade statements-carousel"
+      id="statements-carousel"
       fade
       indicators
       :interval="10000"
       img-width="1920"
       img-height="1440"
+      v-model="slideStatements"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
     >
       <b-carousel-slide
         :img-src="blok.asiento_image.filename"
@@ -126,13 +129,12 @@
             {{ blok.db_text }}
           </b-card-text>
         </b-card>
-        </b-carousel-slide>
+      </b-carousel-slide>
 
-            <b-carousel-slide
+      <b-carousel-slide
         id="db-card"
-v-else
+        v-else
         class="statements-mobile-without-image"
-
       >
         <b-card
           :title="blok.db_name"
@@ -147,7 +149,7 @@ v-else
             {{ blok.db_text }}
           </b-card-text>
         </b-card>
-        </b-carousel-slide>
+      </b-carousel-slide>
     </b-carousel>
   </div>
 </template>
@@ -157,11 +159,24 @@ export default {
   props: {
     blok: {
       type: Object,
-      required: true
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      slideStatements: 0,
+      sliding: null,
     }
   },
 
   methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    },
     isMobile() {
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -172,7 +187,7 @@ export default {
       } else {
         return false
       }
-    }
-  }
+    },
+  },
 }
 </script>
