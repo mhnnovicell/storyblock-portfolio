@@ -54,11 +54,23 @@
               v-for="vegansearchimages in blok.vegansearch_image"
               :key="vegansearchimages.filename"
             >
-              <b-img
-                :src="vegansearchimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  vegansearchimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.vegansearch_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.vegansearch_text }}</div>
@@ -185,11 +197,23 @@
               v-for="brasidanimages in blok.brasidan_image"
               :key="brasidanimages.filename"
             >
-              <b-img
-                :src="brasidanimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  brasidanimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.brasidan_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.brasidan_text }}</div>
@@ -246,11 +270,23 @@
               v-for="asientoimages in blok.asiento_image"
               :key="asientoimages.filename"
             >
-              <b-img
-                :src="asientoimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  asientoimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.asiento_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.asiento_text }}</div>
@@ -304,11 +340,23 @@
               v-for="animalinfoimages in blok.animalinfo_image"
               :key="animalinfoimages.filename"
             >
-              <b-img
-                :src="animalinfoimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  animalinfoimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.animalinfo_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.animalinfo_text }}</div>
@@ -365,11 +413,23 @@
               v-for="beeroclockimages in blok.beeroclock_image"
               :key="beeroclockimages.filename"
             >
-              <b-img
-                :src="beeroclockimages.filename"
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  beeroclockimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
                 :alt="blok.beeroclock_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
                 class="modal-img"
-              ></b-img>
+              />
             </b-col>
             <b-col cols="12" class="mt-3">
               <div class="mt-3 text-white">{{ blok.beeroclock_text }}</div>
