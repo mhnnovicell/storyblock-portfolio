@@ -31,10 +31,14 @@
           ''
         )
       "
-      format="webp"
-      sizes="sm:100vw md:100vw lg:100vw"
-      width="1200"
-      height="800"
+      :format="blok.image.alt === 'logo' ? 'svg' : 'webp'"
+      :sizes="
+        blok.image.alt === 'logo'
+          ? 'xs:25vw sm:25vw md:25vw lg:25vw'
+          : 'xs:100vw sm:100vw md:100vw lg:100vw'
+      "
+      :width="blok.image.alt === 'logo' ? '' : '1200'"
+      :height="blok.image.alt === 'logo' ? '' : '800'"
       :modifiers="{
         quality: 80,
       }"
