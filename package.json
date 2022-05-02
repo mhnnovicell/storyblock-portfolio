@@ -24,6 +24,6 @@
     "@nuxt/image": "^0.6.0",
     "fibers": "^5.0.0",
     "sass": "^1.45.0",
-    "sass-loader": "^10.2.0"
+    "sass-loader": "^10.2.1"
   }
 }

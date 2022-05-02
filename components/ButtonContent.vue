@@ -11,6 +11,7 @@
             v-b-toggle="'collapse-1'"
             class="m-1 collaspeelementfirst h1"
             :aria-expanded="firstElementIsActive ? 'true' : 'false'"
+            :class="firstElementIsActive === true ? 'add-border' : ''"
             @click="firstElementIsActive = !firstElementIsActive"
           >
             {{ blok.web_headline }}
@@ -64,6 +65,7 @@
             class="m-1 collaspeelementsecond h1"
             @click="secondElementActive = !secondElementActive"
             :aria-expanded="secondElementActive ? 'true' : 'false'"
+            :class="secondElementActive === true ? 'add-border' : ''"
           >
             {{ blok.design_headline }}
           </a>
@@ -185,5 +187,10 @@ export default {
     color: #2bf4a1;
     text-decoration: none;
   }
+}
+
+.add-border {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 </style>
