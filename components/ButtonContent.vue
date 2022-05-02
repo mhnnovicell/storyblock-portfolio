@@ -168,9 +168,22 @@ export default {
   &:hover {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #2bf4a1;
+    text-decoration: none;
   }
 
   &:active {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #2bf4a1;
+    text-decoration: none;
+  }
+
+  &:focus {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #2bf4a1;
+    text-decoration: none;
   }
 }
 </style>
