@@ -167,7 +167,19 @@ export default {
     return {
       slideStatements: 0,
       sliding: null,
+      isMobile: false,
     }
+  },
+
+  beforeDestroy() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize, { passive: true })
+    }
+  },
+
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize, { passive: true })
   },
 
   methods: {
@@ -177,16 +189,8 @@ export default {
     onSlideEnd(slide) {
       this.sliding = false
     },
-    isMobile() {
-      if (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        )
-      ) {
-        return true
-      } else {
-        return false
-      }
+    onResize() {
+      this.isMobile = window.innerWidth < 600
     },
   },
 }
