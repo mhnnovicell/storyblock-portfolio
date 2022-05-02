@@ -184,8 +184,12 @@ export default {
     }
   },
 
+  mounted() {
+    this.checkIfMobile()
+  },
+
   computed: {
-    checkiFMobile() {
+    checkIfMobile() {
       if (/Android|webOS|iPhone/i.test(navigator.userAgent)) {
         return (this.isMobile = true)
       } else {
