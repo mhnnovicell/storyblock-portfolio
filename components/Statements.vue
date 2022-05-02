@@ -171,15 +171,14 @@ export default {
     }
   },
 
-  beforeDestroy() {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.onResize, { passive: true })
-    }
-  },
-
-  mounted() {
-    this.onResize()
-    window.addEventListener('resize', this.onResize, { passive: true })
+  computed: {
+    checkiFMobile() {
+      if (/Android|webOS|iPhone|iPad/i.test(navigator.userAgent)) {
+        return (this.isMobile = true)
+      } else {
+        return (this.isMobile = false)
+      }
+    },
   },
 
   methods: {
@@ -188,9 +187,6 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
-    },
-    onResize() {
-      this.isMobile = window.innerWidth < 600
     },
   },
 }
