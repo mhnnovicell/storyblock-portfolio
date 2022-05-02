@@ -29,12 +29,15 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.asiento_title }}</h4>
-          <b-card-text>
+          <h4 class="mt-2 mb-4">{{ blok.asiento_title }}</h4>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.asiento_text }}
           </b-card-text>
 
-          <b-button :href="blok.asiento_link.url" variant="primary"
+          <b-button
+            :href="blok.asiento_link.url"
+            class="mt-2 mb-2"
+            variant="primary"
             >Se mere</b-button
           >
         </b-card>
@@ -52,12 +55,15 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.asiento_title }}</h4>
-          <b-card-text>
+          <h4 class="mt-2 mb-4">{{ blok.asiento_title }}</h4>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.asiento_text }}
           </b-card-text>
 
-          <b-button :href="blok.asiento_link.url" variant="primary"
+          <b-button
+            :href="blok.asiento_link.url"
+            variant="primary"
+            class="mt-2 mb-2"
             >Se mere</b-button
           >
         </b-card>
@@ -76,13 +82,16 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.brasidan_title }}</h4>
+          <h4 class="mt-2 mb-4">{{ blok.brasidan_title }}</h4>
 
-          <b-card-text>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.brasidan_text }}
           </b-card-text>
 
-          <b-button :href="blok.brasidan_link.url" variant="primary"
+          <b-button
+            :href="blok.brasidan_link.url"
+            variant="primary"
+            class="mt-2 mb-2"
             >Se mere</b-button
           >
         </b-card>
@@ -100,13 +109,16 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.brasidan_title }}</h4>
+          <h4 class="mt-2 mb-4">{{ blok.brasidan_title }}</h4>
 
-          <b-card-text>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.brasidan_text }}
           </b-card-text>
 
-          <b-button :href="blok.brasidan_link.url" variant="primary"
+          <b-button
+            :href="blok.brasidan_link.url"
+            variant="primary"
+            class="mt-2 mb-2"
             >Se mere</b-button
           >
         </b-card>
@@ -124,9 +136,9 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.db_title }}</h4>
+          <h4 class="mt-2 mb-4">{{ blok.db_title }}</h4>
 
-          <b-card-text>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.db_text }}
           </b-card-text>
         </b-card>
@@ -144,9 +156,9 @@
           align="center"
           title-tag="h2"
         >
-          <h4>{{ blok.db_title }}</h4>
+          <h4 class="mt-2 mb-4">{{ blok.db_title }}</h4>
 
-          <b-card-text>
+          <b-card-text class="mt-4 mb-4">
             {{ blok.db_text }}
           </b-card-text>
         </b-card>
@@ -174,7 +186,7 @@ export default {
 
   computed: {
     checkiFMobile() {
-      if (/Android|webOS|iPhone|iPad/i.test(navigator.userAgent)) {
+      if (/Android|webOS|iPhone/i.test(navigator.userAgent)) {
         return (this.isMobile = true)
       } else {
         return (this.isMobile = false)

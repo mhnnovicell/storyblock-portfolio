@@ -4,7 +4,7 @@
       <!-- Using value -->
       <transition>
         <div
-          class="col-6"
+          class="col-6 p-0 p-lg-3"
           :class="secondElementActive === true ? 'd-none' : 'd-flex'"
         >
           <a
@@ -57,7 +57,7 @@
 
       <transition>
         <div
-          class="col-6"
+          class="col-6 p-0 p-lg-3"
           :class="firstElementIsActive === true ? 'd-none' : 'd-flex'"
         >
           <a
