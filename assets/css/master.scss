@@ -97,7 +97,7 @@ h5 {
   letter-spacing: 0.1em;
 }
 
-.h1{
+.h1 {
   font-family: 'Poppins', serif;
   font-weight: 200;
   color: #2bf4a1;
@@ -116,14 +116,9 @@ div {
 .swiper-slide {
   img {
     width: 5%;
-    // margin-top: 20px;
-    // margin-left: 60px;
-    // margin-bottom: 10px;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    // height: 100px;
-    // width: 100px;
   }
 }
 
@@ -318,8 +313,12 @@ a {
 
 #carousel-clients {
   .carousel-caption {
-    top: 45%;
+    top: 37%;
     bottom: 0;
+
+    @include media-breakpoint-up(sm) {
+      top: 43%;
+    }
   }
 }
 
@@ -340,13 +339,6 @@ a {
 }
 
 .carousel-caption {
-  // left: 0;
-  margin: 0 auto;
-  // width: 85vw;
-  // right: 0;
-  padding-top: 0px;
-  padding-bottom: 40px;
-
   .card {
     background: rgba(74, 12, 133, 0.45);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -354,6 +346,14 @@ a {
     -webkit-backdrop-filter: blur(13px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+.clients-carousel {
+  .carousel-caption {
+    // margin: 0 auto;
+    // padding-top: 0px;
+    // padding-bottom: 40px;
   }
 }
 
@@ -382,5 +382,11 @@ a {
 .statements-mobile-without-image {
   &:after {
     background: linear-gradient(30deg, #4a0c85 0%, #97258a 50%, #2bf4a1 100%);
+  }
+}
+
+.statements-carousel {
+  .carousel-caption {
+    top: 2%;
   }
 }

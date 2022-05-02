@@ -14,6 +14,7 @@
       img-height="1440"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
+      class="carousel-clients"
     >
       <b-carousel-slide
         v-for="vegansearchimages in blok.vegansearch_image"

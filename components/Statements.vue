@@ -14,6 +14,7 @@
       v-model="slideStatements"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
+      class="statements-carousel"
     >
       <b-carousel-slide
         :img-src="blok.asiento_image.filename"
