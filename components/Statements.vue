@@ -188,15 +188,15 @@ export default {
     this.checkIfMobile()
   },
 
-  computed: {
-    checkIfMobile() {
-      if (/Android|webOS|iPhone/i.test(navigator.userAgent)) {
-        return (this.isMobile = true)
-      } else {
-        return (this.isMobile = false)
-      }
-    },
-  },
+  // computed: {
+  //   checkIfMobile() {
+  //     if (/Android|webOS|iPhone/i.test(navigator.userAgent)) {
+  //       return (this.isMobile = true)
+  //     } else {
+  //       return (this.isMobile = false)
+  //     }
+  //   },
+  // },
 
   methods: {
     onSlideStart(slide) {
@@ -204,6 +204,13 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
+    },
+    checkIfMobile() {
+      if (/Android|webOS|iPhone/i.test(navigator.userAgent)) {
+        return (this.isMobile = true)
+      } else {
+        return (this.isMobile = false)
+      }
     },
   },
 }

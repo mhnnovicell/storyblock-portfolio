@@ -17,6 +17,83 @@
       class="carousel-clients"
     >
       <b-carousel-slide
+        v-for="moviedatabaseimages in blok.moviedatabase_image"
+        :key="moviedatabaseimages.filename"
+        :caption="blok.moviedatabase_headline"
+        v-b-modal="blok.moviedatabase_headline"
+        text-html="<span class='pointer'>Læs mere</span>"
+      >
+        <template #img>
+          <nuxt-img
+            provider="cloudinary"
+            :src="
+              moviedatabaseimages.filename.replace(
+                'https://res.cloudinary.com/mikkelraev/image/upload',
+                ''
+              )
+            "
+            :alt="blok.moviedatabase_headline"
+            sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+            :modifiers="{
+              quality: 80,
+            }"
+            loading="lazy"
+            format="webp"
+            class="d-block img-fluid w-100"
+          /> </template
+      ></b-carousel-slide>
+
+      <!-- The modal -->
+      <b-modal
+        :id="blok.moviedatabase_headline"
+        centered
+        ok-only
+        ok-title="Luk"
+      >
+        <b-container>
+          <b-row class="mb-1">
+            <b-col cols="12" class="mb-3">
+              <h3>{{ blok.moviedatabase_headline }}</h3>
+            </b-col>
+            <b-col
+              cols="12"
+              v-for="moviedatabaseimages in blok.moviedatabase_image"
+              :key="moviedatabaseimages.filename"
+            >
+              <nuxt-img
+                provider="cloudinary"
+                :src="
+                  moviedatabaseimages.filename.replace(
+                    'https://res.cloudinary.com/mikkelraev/image/upload',
+                    ''
+                  )
+                "
+                :alt="blok.moviedatabase_headline"
+                sizes="xs:100vw sm:100vw md:100vw lg:25vw xl:25vw"
+                :modifiers="{
+                  quality: 80,
+                }"
+                loading="lazy"
+                format="webp"
+                class="modal-img"
+              />
+            </b-col>
+            <b-col cols="12" class="mt-3">
+              <div class="mt-3 text-white">{{ blok.moviedatabase_text }}</div>
+            </b-col>
+            <b-col cols="12" class="mt-3">
+              <a
+                :href="blok.moviedatabase_link.url"
+                target="_blank"
+                class="secondary"
+                >Se siden</a
+              >
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-modal>
+
+      <b-carousel-slide
         v-for="vegansearchimages in blok.vegansearch_image"
         :key="vegansearchimages.filename"
         :caption="blok.vegansearch_headline"
